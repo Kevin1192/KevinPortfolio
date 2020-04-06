@@ -1,0 +1,261 @@
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* html, body */
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: 0.1rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+section {
+    height: 100vh;
+}
+
+
+/* home section */
+#home {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, black);
+    background-size: 500% 500%;
+    animation: gradient 15s cubic-bezier(0.260, 0.030, 0.525, 0.980) infinite;
+}
+
+div {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+.btn.project{
+    position: relative;
+    top:0;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    background: white;
+    border-radius: 30px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    box-shadow: 2px 6px cadetblue;
+    transition: all linear 0.3s;
+    opacity: 1;
+
+}
+
+.btn.project:hover {
+    box-shadow: 2px 3px cadetblue ;
+    top: 3px;
+    color: white;
+    transition: all linear 0.5s;
+    opacity: 0.9;
+    background-color: black;
+}
+
+.btn.project i {
+    transition: transform ease-in-out 0.5s;
+    margin-left: 5px;
+}
+.btn.project:hover i {
+    transform: rotate(90deg);
+    transition: transform ease-in-out 0.5s;
+}
+.btn.project:active {
+    box-shadow: 2px 0px cadetblue;
+    top: 6px;
+    transition: all linear 0.3s;
+}
+
+.highlight {
+    text-shadow: 6px 8px 10px rgba(0,0,0,0.6);
+    transition: all linear 0.5s;
+    color: #fff;
+    font-size: 6vw;
+}
+
+
+.highlight:hover {
+    transform: scale(1.1);
+    transition: all linear 0.5s;
+    text-shadow: 6px 8px 10px rgba(0,0,0,0.6);
+
+    color: rgb(36, 31, 31);
+}
+
+h2 {
+    font-size: 3vw;
+    text-shadow: 1px 1px  rgb(104, 101, 101), 
+                2px 2px  rgb(104, 101, 101);
+}
+
+h2 {
+    transition: all ease 1s;
+}
+h2:hover {
+    transform: scale(0.9);
+    text-shadow: 1px 1px 5px rgb(104, 101, 101), 
+                2px 2px 5px rgb(104, 101, 101), 
+                3px 3px 5px rgb(104, 101, 101);
+                transition: all ease 1s;
+}
+
+.logo {
+    height: 120px;
+    margin-left: 10px;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+    transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 1.5s;
+}
+
+#logo-image {
+    width: 100%;
+    align-self: flex-start;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project:hover, .page-link:hover {
+    cursor: pointer;
+}
+
+
+
+
+ /* navBar */
+
+
+
+.link-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+nav i.fas.fa-bars {
+    display: none;
+}
+
+
+ nav{
+     padding: 2vw  3vw;
+     display: flex;
+     align-self: flex-start;
+    }
+.link-wrap .page-link{
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    padding: 0 0.6vw;
+}
+
+
+.link-wrap .page-link:active i{
+    position: relative;
+    top: 2px;
+    transition: top 0.3s ease-in-out 0.3s;
+}
+
+.link-wrap .page-link i {
+    transition: all ease-in-out 0.5s;
+}
+
+.link-wrap .page-link:hover i{
+    transform: scale(1.1) rotate(3deg);
+    transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 0.5s;
+}
+
+.active i{
+    transform: scale(1.1);
+    transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 0.5s;
+}
+
+.fixed {
+    position: fixed;
+    transition: all ease-in-out 1s;
+    right: 0vw;
+    bottom: inherit;
+    top: 0;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    animation: slideIn 1s;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+}
+
+.slideOut {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideOut {
+    100%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+
+/* responsive design */
+@media screen and (max-width: 800px) {
+    .link-wrap .page-link i {
+        font-size: 14px;
+    }
+
+    }
+@media screen and (max-width: 600px) {
+    nav i.fas.fa-bars {
+        display: block;
+        position: fixed;
+        top: 5vh;
+        right: 5vw;
+        font-size: 30px;
+    }
+
+
+    nav .page-link {
+        display: none;
+    }
+    .logo {
+        height: 80px;
+        display: inline-block;
+        position: absolute;
+        top: 3vh;
+    }
+    #home {
+        justify-content: space-around;
+    }
+}
+
+
