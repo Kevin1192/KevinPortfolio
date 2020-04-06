@@ -11,6 +11,20 @@
     }
 }
 
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    60% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* html, body */
 body {
     margin: 0;
@@ -160,7 +174,7 @@ nav i.fas.fa-bars {
 
 
  nav{
-     padding: 2vw  3vw;
+     padding: 1vw  2vw;
      display: flex;
      align-self: flex-start;
     }
@@ -179,17 +193,27 @@ nav i.fas.fa-bars {
 
 .link-wrap .page-link i {
     transition: all ease-in-out 0.5s;
+    opacity: 0.7;
+
 }
 
 .link-wrap .page-link:hover i{
     transform: scale(1.1) rotate(3deg);
+    opacity: 1;
     transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 0.5s;
+}
+i {
+    transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 1s; 
+}
+.link-wrap .active i{
+    position: relative;
+    opacity: 1;
+    transform: scale(1.1);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(163, 243, 243);
+    transition: transform cubic-bezier(0.535, -0.290, 0.355, 1.635) 1s, border-bottom ease-in-out 0.5s;
 }
 
-.active i{
-    transform: scale(1.1);
-    transition: all cubic-bezier(0.535, -0.290, 0.355, 1.635) 0.5s;
-}
 
 .fixed {
     position: fixed;
@@ -202,6 +226,7 @@ nav i.fas.fa-bars {
     width: 100%;
     background-color: black;
     opacity: 0.8;
+    border-bottom: 5px rgb(11, 159, 204) solid;
     animation: slideIn 1s;
 }
 @keyframes slideIn {
@@ -232,20 +257,38 @@ nav i.fas.fa-bars {
     .link-wrap .page-link i {
         font-size: 14px;
     }
-
     }
+
+.background-color {
+    background-color: rgba(255, 192, 203);
+    animation: slideInRight ease-in-out 1s 1;
+
+}
 @media screen and (max-width: 600px) {
-    nav i.fas.fa-bars {
-        display: block;
+    nav {
+        display: flex;
         position: fixed;
-        top: 5vh;
-        right: 5vw;
+        flex-direction: column;
+        right: 0;
+        top: 0;
         font-size: 30px;
+        padding: 0;
+        opacity: 0.9;
+        border-radius: 10px;
     }
-
-
-    nav .page-link {
+    nav i.fas.fa-bars {
+        display: inline;
+        order: -1;
+        padding-right: 5vw;
+        align-self: flex-end;
+    }
+    nav .visible {
+        display: inline;
+        animation: slideInRight ease-in-out 1s 1;
+    }
+    .link-wrap {
         display: none;
+
     }
     .logo {
         height: 80px;
