@@ -86,5 +86,11 @@ $(function () {
   $(".fa-bars").on("click", function () {
     $(".link-wrap").toggleClass("visible");
     $('nav').toggleClass('background-color');
+    $('nav .fa-bars').toggleClass('barColorChange');
   });
+
+
+  function WaitAnimation() {
+      
+  }
 });
