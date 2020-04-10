@@ -562,9 +562,20 @@ h6 {
     justify-content: flex-end;
     align-content: center;
     width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.project-up-job {
     background: url('../img/jobboard.jpg');
     background-size: cover;
-    border-radius: 10px 10px 0 0;
+}
+.project-up-musical {
+    background: url('../img/musical.jpg');
+    background-size: cover;
+}
+
+.project-up-camp {
+    background: url('../img/camp.jpg');
+    background-size: cover;
 }
 
 .projects:hover .project-front {
@@ -588,6 +599,20 @@ a{
     position: absolute;
     top: 0;
     border-radius: 10px;
+}
+
+.overlay-job {
+    background: linear-gradient(to right bottom, #838383, #2e2e2e);;
+    transition: all ease-in-out 0.7s;
+}
+.overlay-musical {
+    background: linear-gradient(to right bottom, #22c1c3, #b06ab3);;
+    transition: all ease-in-out 0.7s;
+}
+
+.overlay-camp {
+    background: linear-gradient(to right bottom,#302b63, #3b013d);;
+    transition: all ease-in-out 0.7s;
 }
 .overlay h3 {
     color: white;
@@ -650,7 +675,7 @@ ul {
     padding: 0 5rem;
 }
 li:not(:last-child) {
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid rgb(209, 204, 204);
 }
 a:hover .fa-github {
     animation: rubberBand ease-in-out 1s;
@@ -721,6 +746,7 @@ form {
 .social {
     font-size: 40px;
 }
+
 .social-span {
         margin: 20px;
         display: flex;
