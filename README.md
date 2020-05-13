@@ -9,3 +9,7 @@ http://www.kevinportfolio.com
 
 
 This website is built using HTML/CSS, and JavaScript. It utilizes jQuery for visual animations. 
+
+## Note
+
+I'm trying to refactor this site using ReactJS for its front-end. The current repo may not align with the live site you see from above link.
