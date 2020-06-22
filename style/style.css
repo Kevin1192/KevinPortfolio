@@ -1051,8 +1051,8 @@ a{
 }
 .overlay-socialapp {
     background: -webkit-gradient(linear, left top, right bottom, from(#417035), to(#b06ab3));
-    background: -o-linear-gradient(left top, #aed1d1, #b06ab3);
-    background: linear-gradient(to right bottom, #bdd8d8, #b06ab3);;
+    background: -o-linear-gradient(left top, #aed1d1, #984c9b);
+    background: linear-gradient(to right bottom, #bdd8d8, #783a7a);;
     -webkit-transition: all ease-in-out 0.7s;;
     -o-transition: all ease-in-out 0.7s;;
     transition: all ease-in-out 0.7s;
