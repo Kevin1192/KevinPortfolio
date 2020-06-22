@@ -991,6 +991,10 @@ h6 {
     background: url('../img/camp.jpg');
     background-size: cover;
 }
+.project-up-socialapp {
+    background: url('../img/socialapp.jpg');
+    background-size: cover;
+}
 
 .projects:hover .project-front {
         opacity: 0;
@@ -1028,6 +1032,7 @@ a{
     border-radius: 10px;
 }
 
+
 .overlay-job {
     background: -webkit-gradient(linear, left top, right bottom, from(#838383), to(#2e2e2e));
     background: -o-linear-gradient(left top, #838383, #2e2e2e);
@@ -1044,7 +1049,14 @@ a{
     -o-transition: all ease-in-out 0.7s;;
     transition: all ease-in-out 0.7s;
 }
-
+.overlay-socialapp {
+    background: -webkit-gradient(linear, left top, right bottom, from(#417035), to(#b06ab3));
+    background: -o-linear-gradient(left top, #aed1d1, #b06ab3);
+    background: linear-gradient(to right bottom, #bdd8d8, #b06ab3);;
+    -webkit-transition: all ease-in-out 0.7s;;
+    -o-transition: all ease-in-out 0.7s;;
+    transition: all ease-in-out 0.7s;
+}
 .overlay-camp {
     background: -webkit-gradient(linear,left top, right bottom,from(#302b63), to(#3b013d));
     background: -o-linear-gradient(left top,#302b63, #3b013d);
