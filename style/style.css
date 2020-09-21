@@ -982,6 +982,10 @@ h6 {
     background: url('../img/jobboard.jpg');
     background-size: cover;
 }
+.project-up-cgtax {
+    background: url('../img/moneygrow.jpg');
+    background-size: cover;
+}
 .project-up-musical {
     background: url('../img/musical.jpg');
     background-size: cover;
@@ -1065,6 +1069,15 @@ a{
     -o-transition: all ease-in-out 0.7s;;
     transition: all ease-in-out 0.7s;
 }
+.overlay-cgtax {
+    background: -webkit-gradient(linear,left top, right bottom,from(#9cd303), to(#ccf003));
+    background: -o-linear-gradient(left top,#9cd303, #ccf003);
+    background: linear-gradient(to right bottom,#9cd303, #c4f003);;
+    -webkit-transition: all ease-in-out 0.7s;;
+    -o-transition: all ease-in-out 0.7s;;
+    transition: all ease-in-out 0.7s;
+}
+
 .overlay h3 {
     color: white;
     font-weight: 400;
